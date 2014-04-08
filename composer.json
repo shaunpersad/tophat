@@ -1,0 +1,22 @@
+{
+    "name": "TopHat",
+    "require": {
+        "klein/klein": "dev-master",
+        "vlucas/valitron": "dev-master",
+        "doctrine/dbal": "2.5.*@dev",
+        "doctrine/cache": "1.4.*@dev",
+        "rych/phpass": "2.1.*@dev",
+        "solarium/solarium": "3.1.*",
+        "smottt/wideimage": "dev-master",
+        "facebook/php-sdk": "v3.2.2",
+        "mynetx/codebird-php": "dev-master"
+    },
+    "autoload": {
+        "psr-0": {
+            "TopHat": [
+                "classes/",
+                "controllers/"
+            ]
+        }
+    }
+}

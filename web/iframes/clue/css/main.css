@@ -1,0 +1,1296 @@
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+html {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images, videos, audio and canvas and the bottom of
+ * their containers: h5bp.com/i/440
+ */
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browse Happy prompt
+   ========================================================================== */
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+a:link {text-decoration:none;}
+a:visited {text-decoration:none;}
+a:hover {text-decoration:none;}
+a:active {text-decoration:none;}
+
+
+.translucent {
+
+	background-image: url('../images/overlay-black.png');
+	background-repeat: repeat;	
+}
+
+.translucent-css {
+
+	background-color: #000;
+  /* IE 8 */
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+
+  /* IE 5-7 */
+  filter: alpha(opacity=80);
+
+  /* Netscape */
+  -moz-opacity: 0.8;
+
+  /* Safari 1.x */
+  -khtml-opacity: 0.8;
+
+  /* Good browsers */
+  opacity: 0.8;
+	
+}
+
+.wrapper {
+
+	width: 968px;
+	height: 820px;	
+	margin: 0 auto;
+	background-color: #000;
+	position: relative;
+	overflow: hidden;
+	display: none;
+}
+
+
+.btn {
+	
+	background-image: url('../images/background-button.png');
+	background-repeat: no-repeat;
+	background-size: cover;	
+	background-position: right top;
+	background-color: transparent;
+	color: #fff;
+	font-family: 'cubanoregular';
+	border: 0 none;
+	
+}
+
+.btn-circular {
+	
+	background-repeat: no-repeat;
+	background-size: contain;	
+	background-position: center;
+	background-color: transparent;
+	font-family: 'cubanoregular';
+	border: 0 none;
+	text-align: center;
+
+}
+
+.btn img,.btn-circular img {
+
+  -webkit-transition: -webkit-transform 0.1s;
+	 -moz-transition: -moz-transform 0.1s;
+	   -o-transition: -o-transform 0.1s;
+		  transition: transform 0.1s;		
+	
+}
+
+.btn.animate-down img, .btn-circular.animate-down img {
+	
+  -webkit-transform: rotate( 7deg );
+	 -moz-transform: rotate( 7deg );
+	   -o-transform: rotate( 7deg );
+		  transform: rotate( 7deg );		
+}
+
+.btn.animate-up img, .btn-circular.animate-up img {
+	
+  -webkit-transform: rotate( -7deg );
+	 -moz-transform: rotate( -7deg );
+	   -o-transform: rotate( -7deg );
+		  transform: rotate( -7deg );		
+}
+
+
+.btn-circular.red {
+	background-image: url('../images/btn-circular-red.png');	
+}
+
+.btn-circular.black {
+	background-image: url('../images/btn-circular-black.png');	
+}
+
+.btn-circular.back-to-map {
+
+    height: 40px;
+    margin-left: 5px;
+    margin-top: 10px;
+    width: 40px;
+
+}
+.btn-circular.back-to-map img {
+	
+	width: 20px;	
+}
+a.back-to-map {
+	font-family: 'cubanoregular';
+	font-size: 18px;
+	color: #fff;
+}
+
+
+.btn.investigate {
+	font-size: 28px;
+	height: 65px;
+	padding-left: 25px;
+	padding-right: 25px;
+	
+}
+
+
+article {
+	width: 100%;
+	height: 100%;
+}
+
+article, aside {
+	display: none;
+}
+aside {
+	
+	position: absolute;	
+	z-index: 15;
+}
+
+#full-overlay {
+	
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 10 !important;
+}
+
+#partial-overlay {
+	
+	width: 100%;
+	height: 728px;
+	bottom: 0;
+	left: 0;
+	z-index: 10 !important;
+}
+
+#folder-rules {
+	
+	background-image: url('../images/folder-rules.png');
+	width: 474px;
+	height: 809px;
+	top: 0;
+	color :#000;
+}
+
+#folder-rules.showing {
+	display: block;
+	right: 0;
+}
+#folder-rules.peeking {
+	display: block;
+	right: -405px;
+}
+#folder-rules.hiding {
+	right: -474px;
+}
+
+#folder-rules .content {
+
+    margin-left: 105px;
+    margin-top: 105px;
+    width: 350px;	
+	position: relative;
+
+}
+
+#folder-rules .content ol {
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+#folder-rules .content ol li {
+
+	padding-left: 0;
+	margin-left: 0;	
+	display: inline-block;
+	margin-bottom: 12px;
+}
+
+#folder-rules .content ol li div {
+	
+	float: left;
+	width: 310px;
+}
+
+#folder-rules .content .number {
+	background-image: url('../images/background-list.jpg');
+	width: 30px;
+	height: 30px;
+	text-align: center;
+	font-family: 'cubanoregular';
+	font-size: 26px;
+	color: #fff !important;
+	line-height: 30px;
+	vertical-align: middle;
+	margin-left: -10px;
+	margin-right: 15px;
+	display: block;
+	float: left;
+
+}
+
+
+.btn-circular.open-folder-rules, .btn-circular.close-folder-rules {
+	
+    bottom: 130px;
+    height: 51px;
+    left: -90px;
+    position: absolute;
+    width: 51px;
+}
+.btn-circular.close-folder-rules {
+	
+	display: none;
+}
+
+.btn-circular.open-folder-rules img, .btn-circular.close-folder-rules img {
+	
+}
+
+
+#folder-rules h2 {
+	font-family: 'cubanoregular';
+	font-size: 36px;
+	margin: 0;
+	padding: 0;
+}
+
+#folder-rules .top {
+	margin-bottom: 40px;
+}
+
+#folder-rules .top h2 {
+	
+}
+
+#folder-rules .bottom {
+	
+}
+
+#folder-rules .bottom h2 {
+	margin-bottom: 20px;
+}
+
+#folder-rules p, #folder-rules li {
+    font-family: 'museo_sans_rounded700';
+	font-size:14px;	
+}
+
+
+#folder-clue-sheet {
+	
+	background-image: url('../images/folder-clue-sheet.png');
+	width: 456px;
+	height: 809px;
+	top: 0;
+	z-index: 20;
+}
+
+#folder-clue-sheet.showing {
+	display: block;
+	right: 0;
+}
+#folder-clue-sheet.peeking {
+	display: block;
+	right: -405px;
+}
+#folder-clue-sheet.hiding {
+	right: -456px;
+}
+
+#folder-clue-sheet .content {
+
+    margin-left: 132px;
+    margin-top: 80px;
+    position: relative;
+
+}
+
+#folder-clue-sheet .select {
+    height: 228px;
+    padding-bottom: 20px;
+    width: 100%;	
+}
+
+#folder-clue-sheet .select a {
+    display: block;
+    float: left;
+    height: 94px;
+    margin-bottom: 12px;
+    margin-right: 12px;
+    width: 94px;
+	position: relative;
+}
+#folder-clue-sheet .select a img {
+	width: 94px;
+	height: 94px;	
+}
+
+.select .selectable.hover {
+	
+	-moz-box-shadow: 0 0 5px #e73434;
+	-webkit-box-shadow: 0 0 5px #e73434;
+	box-shadow: 0 0 5px #e73434;	
+}
+
+.pick-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;	
+	display: none;
+}
+
+#guess {
+
+	width: 482px;
+	height: 230px;
+	background-image: url('../images/popup-guess.png');	
+	background-repeat: no-repeat;
+	text-align: center;	
+	top: 220px;
+	left: 35px;
+	color: #000;
+	z-index: 20;
+}
+
+#guess h2 {
+	font-size: 24px;
+    font-family: 'mission_gothicregular';
+	font-style: italic;
+	margin: 20px 0 10px;
+}
+
+#guess ul {
+	
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	text-align: center;
+}
+
+#guess ul li { 
+
+	display: inline-block; 
+	font-size: 20px;
+	font-family: 'cubanoregular';
+	width: 110px;
+}
+
+#guess ul li div {
+	
+	width: 110px;
+	height: 110px;	
+}
+
+#guess h3 {
+	
+	margin: 0;
+	padding: 0;
+}
+
+#guess button {
+	
+	width: 181px;
+	height: 53px;
+	font-size: 30px;
+	margin-top: 5px;
+}
+
+
+
+nav {
+	
+	height: 92px;
+	width: 100%;	
+}
+
+.left {
+	
+	float: left;	
+}
+.right {
+	
+	float: right;
+}
+
+nav .btn.leaderboard, nav .btn.the-rules, nav .btn.map {
+	font-size: 16px;
+	height: 30px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-left: 20px;
+}
+
+nav .btn.guess, nav .btn.print, nav .btn.play-again, nav .btn.next, nav .btn.try-again {
+	font-size: 24px;
+	height: 42px;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin-top: 10px;
+}
+
+
+#home {
+
+	background-image: url('../images/background-homepage.jpg');	
+	background-repeat: no-repeat;
+	display: block;
+	text-align: center;
+}
+
+#logo-ryans img {
+	padding-top: 15px;
+}
+
+#logo-clue {
+
+	width: 295px;
+	height: 105px;	
+	display: block;
+	margin: 0 auto;	
+	background-image: url('../images/logo-clue.png');
+	margin-top: 6px;
+}
+
+#home > img {
+	
+	margin-top: 140px;
+	margin-bottom: 20px;
+	margin-left: 968px;
+}
+
+#home .btn.investigate {
+	
+	display: none;
+}
+
+.page-with-nav {
+		
+}
+
+.page-with-nav section {
+	
+	width: 926px;
+	height: 703px;
+	margin: 0 auto;
+}
+
+.page-with-nav .nav-content {
+	
+	width: 926px;
+	height: 72px;
+	margin: 0 auto;
+	position: relative;
+		
+}
+.page-with-nav .nav-content .left, .page-with-nav .nav-content .right {
+
+	position: absolute;
+	bottom: 0;
+}
+
+.page-with-nav .nav-content .left {
+	
+	left: 0;
+}
+.page-with-nav .nav-content .right {
+	
+	right: 0;
+}
+
+.timer {
+	width: 158px;
+	height: 52px;
+	background-image: url('../images/background-timer.png');
+	font-family: 'cubanoregular';
+	font-size: 30px;	
+	float: left;
+	margin-right: 35px;
+}
+.timer .time {
+	
+	color: #fff;
+	float: left;
+	margin-left: 10px;
+}
+
+.timer .additions {
+	
+	color: #000;
+	float: right;
+	margin-right: 7px;
+	display: none;
+}
+
+.timer .additions.bottom-spot {
+	margin-top: 15px;
+	color: #d62e2e;
+}
+
+.timer .additions.top-spot {
+	margin-top: -7px;
+	color: #fff;
+	
+}
+
+.timer .additions .plus {
+
+    display: block;
+    float: left;
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 14px;
+
+}
+
+.timer .additions .plus {
+
+    display: block;
+	float: left;
+}
+
+#map section {
+	background-image: url('../images/background-map.jpg');
+	background-repeat: no-repeat;
+	position: relative;
+}
+
+#map section a {
+
+	display: block;
+	position: absolute;	
+	color: #fff;
+	font-size: 24px;
+	text-align: center;
+	font-family: 'cubanoregular';
+	vertical-align:middle;			
+}
+
+#map section a.hover {
+
+	border: 5px solid #d62e2e;
+	background-image: url('../images/background-station-hover.png');
+}
+
+#map section a.visited {
+	border: 5px solid #d62e2e;	
+}
+
+#map section #overlay-dining-tables-1.visited {
+	
+	border: 0 none;	
+	background-image: url('../images/overlay-dining-tables-visited-1.png');
+}
+
+#map section #overlay-dining-tables-2.visited {
+	
+	border: 0 none;	
+	background-image: url('../images/overlay-dining-tables-visited-2.png');
+}
+
+#map section a span {
+	display: none;
+}
+#map section a.hover span {
+	display: block;
+}
+
+#overlay-bakery {
+
+    bottom: 0;
+    height: 123px;
+	line-height: 123px;
+    left: 285px;
+    width: 283px;
+}
+#overlay-carving-station {
+
+    bottom: 0;
+    height: 194px;
+	line-height: 194px;
+    left: 0;
+    width: 211px;
+	
+}
+#overlay-dining-tables-1 {
+	
+    top: 0;
+    height: 504px;
+    right: 0;
+    width: 306px;
+}
+
+#overlay-dining-tables-1.hover {
+	
+	background-image: url('../images/background-dining-overlay.png') !important;
+	border: none !important;
+	line-height: 504px;
+}
+
+#overlay-dining-tables-2 {
+
+    top: 246px;
+    height: 258px;
+    right: 306px;
+    width: 129px;
+}
+
+#overlay-dining-tables-2.hover {
+	
+	background-image: url('../images/background-dining-overlay-small.png') !important;
+	border: none !important;	
+}
+
+
+#overlay-fresh-market {
+
+    height: 160px;
+    left: 70px;
+    line-height: 160px;
+    top: 285px;
+    width: 283px;	
+
+}
+#overlay-game-room {
+
+    top: 0;
+    height: 211px;
+	line-height: 211px;
+    left: 0;
+    width: 200px;	
+}
+#overlay-grill {
+
+    top: 0;
+    height: 150px;
+	line-height: 150px;
+    left: 276px;
+    width: 301px;	
+	
+}
+#overlay-omelet-station {
+
+    bottom: 0;
+    height: 123px;
+	line-height: 123px;
+    right: 0;
+    width: 283px;		
+	
+}
+
+#info-overlay {
+	
+	width: 100%;
+	height: 100%;
+	text-align: center;	
+}
+#info-overlay .translucent {
+    height: 730px;
+    margin-top: 72px;
+}
+#info-overlay.showing {
+	
+	display: block;
+	bottom: 0;
+	left: 0;	
+}
+
+#info-overlay .content {
+	
+	position: relative;	
+}
+
+#info-overlay .content img {
+	
+	position: absolute;	
+}
+
+#info-overlay button {
+	
+	font-size: 28px;
+	height: 65px;
+	padding-left: 10px;
+	padding-right: 10px;	
+	margin-top: 323px;
+	width: 345px;
+}
+#info-overlay button img {
+	float: right;
+    margin-right: 20px;
+    margin-top: 5px;		
+}
+
+#info-timer {
+    left: 34px;
+    top: 28px;	
+}
+
+#info-additions {
+    left: 163px;
+    top: 22px;	
+}
+
+#info-guess {
+    left: 348px;
+    top: 10px;	
+}
+
+#info-leaderboard {
+
+    right: 268px;
+    top: 25px;	
+}
+
+#info-rules {
+		
+    right: 40px;
+    top: 20px;	
+}
+
+#clues {
+	
+	bottom: 0;
+	left: 0;
+		
+}
+
+#clues .content {
+	
+	position: relative;	
+	width: 490px;
+	height: 600px;	
+}
+
+.speech-bubble {
+	
+    background-image: url("../images/popup-clue.png");
+    height: 230px;
+    left: 40px;
+    position: absolute;
+    top: 0;
+    width: 458px;
+	z-index: 2;
+	
+}
+
+.speech-bubble p {
+
+    font-family: 'mission_gothicbold';
+	font-size: 40px;
+    margin: 0;
+    padding: 25px 25px 0;		
+}
+
+.speech-bubble .highlighted {
+	font-style: italic;		
+}
+
+#clues .content .btn-circular {
+	
+    height: 60px;
+    position: absolute;
+    right: -20px;
+    top: 170px;
+    width: 60px;
+    z-index: 3;
+}
+
+#clue-character {
+	
+	position: absolute;
+	right: 0;
+	bottom: 0;	
+	z-index: 1;
+}
+
+#incorrect section, #correct section {
+	position: relative;	
+}
+
+.polaroid-who, .polaroid-what, .icon-correct {
+	
+	position: absolute;	
+}
+
+.polaroid-who {
+	
+    left: 115px;
+    top: 70px;
+    z-index: 2;
+}
+
+.polaroid-what {
+	
+    right: 140px;
+    top: 90px;
+    z-index: 1;
+}
+
+.icon-correct {
+	
+    left: 320px;
+    top: 60px;
+    z-index: 3;
+}
+
+#print section {
+	
+    text-align: center;
+	position: relative;
+}
+
+#print section img {
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+}
+
+#print section span {
+	
+    display: block;
+    font-family: 'cubanoregular';
+    font-size: 45px;
+    padding-top: 315px;
+    position: relative;
+    z-index: 2;	
+}
+
+
+#congratulations {
+
+	top: 115px;
+	left: 42px;
+	background-image: url('../images/background-congratulations.png');
+	background-repeat:no-repeat;
+	width: 884px;
+	height: 352px;
+	z-index: 25px;
+}
+
+#congratulations form {
+	text-align: center;
+}
+
+#congratulations form div {
+    font-family: 'cubanoregular';
+	background-color: #eeeeee;
+	width: 630px;
+	margin: 185px auto 0;
+	padding: 5px;
+	position: relative;
+}
+
+#congratulations form div img {
+	
+	float: left;
+}
+
+#congratulations form div input[type="text"] {
+	
+    border: 0 none;
+    float: left;
+    font-size: 28px;
+    height: 31px;
+    margin-left: 10px;
+    margin-top: 3px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 450px;
+    font-family: 'cubanoregular';
+}
+
+#congratulations form div span {
+	
+	font-size: 28px;	
+}
+
+#congratulations form button {
+	
+	width: 346px;
+	height: 66px;
+	margin-top: 25px;
+	font-size: 28px;
+}
+
+#congratulations form label.error {
+	
+    bottom: -20px;
+    left: 205px;
+    position: absolute;	
+}
+
+
+#leaderboard {
+	
+    background-image: url("../images/background-leaderboard.png");
+    background-repeat: no-repeat;
+    font-family: 'cubanoregular';
+    font-size: 28px;
+    height: 681px;
+    left: 38px;
+    top: 100px;
+    width: 892px;	
+}
+
+#leaderboard ol {
+
+    list-style-type: none;
+    margin-left: 8px;
+    margin-top: 85px;
+    padding: 0;
+    width: 868px;
+
+}
+
+#leaderboard ol li {
+
+	height: 60px;
+	line-height: 60px;
+	vertical-align: middle;
+	width: 100%;
+}
+
+#leaderboard ol li.bg {
+
+	height: 50px !important;
+	line-height: 50px !important;
+	vertical-align: middle;
+	width: 100%;
+	background-color: #eeeeee;
+}
+
+
+#leaderboard ol li .rank, #leaderboard ol li .name {
+	
+	float: left;
+	margin-left: 10px;
+}
+
+#leaderboard ol li .rank {
+	
+	color: #fff !important;	
+	text-align: center;
+	display: block;
+	background-image: url('../images/background-list-larger.jpg');
+	background-repeat: no-repeat;
+	height: 41px;
+	width: 41px;
+	line-height: 41px;
+	vertical-align: middle;
+	margin-left: 10px;
+	margin-top: 10px;
+}
+
+
+#leaderboard ol li.bg .rank {
+
+	margin-top: 5px !important;
+}
+
+
+
+#leaderboard ol li .record {
+	float: right;
+	margin-right: 20px;
+}
+
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.highlighted {
+	
+	color: #e73434 !important;
+}
+
+
+/*
+ * Image replacement
+ */
+
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

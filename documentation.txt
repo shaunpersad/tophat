@@ -1,0 +1,71 @@
+        /*
+         * author_id (int) //users.id = ?
+         * author_id_in (array of ints) //users.id IN (?)
+         * author_id_not_in array (array of ints) //users.id NOT IN (?)
+         *
+         * author_email (string) //users.email = ?
+		 
+         * category_id (int) //categories.id = ?
+         * category_id_in (array of ints)  //categories.id IN (?)
+         * category_id_not_in (array of ints) //categories_id NOT IN (?)
+         * category_id_and (array of ints) //categories.id = ? AND categories.id = ?
+         *
+         * category_slug (string) categories.slug = ?
+         * category_slug_in (array of strings) categories.slug IN (?)
+         * category_slug_not_in (array of strings) categories.slug NOT IN (?)
+         * category_slug_and (array of strings) categories.slug = ? AND categories.slug = ?
+         *
+         * section_id (int) sections.id = ?
+         * section_id_in (array of ints) sections.id IN (?)
+         * section_id_not_in (array of ints) sections.id NOT IN (?)
+         * section_id_and (array of ints) sections.id = ? AND sections.id = ?
+         *
+         * section_slug
+         * section_slug_in
+         * section_slug_not_in
+         * section_slug_and
+         *
+         * post_id_in
+         * post_id_not_in
+         *
+         * post_slug_in
+         * post_slug_not_in
+		 *
+         * meta_title
+         * meta_title_in
+         * meta_title_not_in
+         * meta_title_and
+         *
+         * meta_value
+         * meta_value_in
+         * meta_value_not_in
+         * meta_value_and
+		 *
+         * meta_type
+         * meta_type_in
+         * meta_type_not_in
+         * meta_type_and
+		 *
+         * tag_id
+         * tag_id_in
+         * tag_id_not_in
+         * tag_id_and
+         *
+         * tag_title
+         * tag_title_in
+         * tag_title_not_in
+         * tag_title_and
+		 *
+         * status
+         * status_in
+         * status_not_in		 
+         *
+         * s
+		 * 
+         * page
+         * per_page
+         *
+         * order_by
+         * order_dir
+         *
+         */
